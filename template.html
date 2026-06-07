@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page { size: A4; margin: 20mm; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; font-size: 13px; line-height: 1.5; }
+        
+        /* Header */
+        .header { display: flex; justify-content: space-between; margin-bottom: 50px; }
+        .company-logo { font-size: 24px; font-weight: bold; color: #1a365d; letter-spacing: -1px; }
+        .company-details { text-align: left; color: #718096; }
+        
+        /* Document Title & Meta */
+        .doc-title { font-size: 28px; font-weight: 300; text-transform: uppercase; color: #1a365d; margin-bottom: 5px; }
+        .doc-meta { color: #718096; margin-bottom: 30px; }
+        
+        /* Bill To / Ship To */
+        .details-container { display: flex; justify-content: space-between; margin-bottom: 40px; border-bottom: 1px solid #edf2f7; padding-bottom: 20px; }
+        .billed-to { width: 45%; }
+        .billed-to h3 { font-size: 11px; text-transform: uppercase; color: #a0aec0; margin-bottom: 5px; letter-spacing: 1px; }
+        .client-name { font-size: 16px; font-weight: bold; color: #2d3748; margin-bottom: 5px; }
+        
+        /* Table */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+        th { background-color: #f7fafc; text-align: left; padding: 12px; font-size: 11px; text-transform: uppercase; color: #4a5568; font-weight: 600; border-bottom: 2px solid #edf2f7; }
+        td { padding: 12px; border-bottom: 1px solid #edf2f7; vertical-align: top; }
+        .col-qty { width: 10%; text-align: center; }
+        .col-desc { width: 55%; }
+        .col-price { width: 17%; text-align: right; }
+        .col-total { width: 18%; text-align: right; font-weight: 600; }
+        
+        /* Totals */
+        .totals-container { display: flex; justify-content: flex-end; margin-bottom: 50px; }
+        .totals-table { width: 40%; }
+        .totals-table td { padding: 8px 12px; border: none; }
+        .totals-table tr.final-total td { font-size: 16px; font-weight: bold; color: #1a365d; border-top: 2px solid #1a365d; padding-top: 12px; }
+        
+        /* Footer / Legal */
+        .footer { font-size: 11px; color: #a0aec0; text-align: center; position: absolute; bottom: 0; width: 100%; border-top: 1px solid #edf2f7; padding-top: 15px; }
+        .signature-block { display: flex; justify-content: space-between; margin-top: 40px; page-break-inside: avoid; }
+        .sig-box { width: 45%; border: 1px dashed #cbd5e0; padding: 15px; height: 120px; font-size: 11px; color: #718096; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="company-details">
+            <div class="company-logo">B SERVICE</div>
+            <p>45 Rue Eugene Derrien<br>94400 VITRY SUR SEINE<br>Email: birdouzaziz02@gmail.com<br>Tél: +33 7 51 38 86 86</p>
+        </div>
+        <div style="text-align: right;">
+            <div class="doc-title">{{ type_document }}</div>
+            <div class="doc-meta">
+                <strong>N° :</strong> {{ numero }}<br>
+                <strong>Date :</strong> {{ date }}<br>
+                <strong>Validité :</strong> {{ validite }}
+            </div>
+        </div>
+    </div>
+
+    <div class="details-container">
+        <div class="billed-to">
+            <h3>Destinataire</h3>
+            <div class="client-name">{{ client.nom }}</div>
+            <p style="margin: 0; color: #4a5568;">{{ client.adresse }}<br>{{ client.code_postal_ville }}</p>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="col-qty">Qté</th>
+                <th class="col-desc">Désignation des prestations (Fourniture & Pose)</th>
+                <th class="col-price">P.U. HT</th>
+                <th class="col-total">Montant HT</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in articles %}
+            <tr>
+                <td class="col-qty">{{ item.quantite }}</td>
+                <td class="col-desc"><strong>{{ item.designation }}</strong></td>
+                <td class="col-price">{{ item.pu_ht_formate }} €</td>
+                <td class="col-total">{{ item.total_ht_formate }} €</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="totals-container">
+        <table class="totals-table">
+            <tr>
+                <td style="text-align: left; color: #718096;">Total HT</td>
+                <td style="text-align: right; font-weight: 600;">{{ total_ht }} €</td>
+            </tr>
+            <tr>
+                <td style="text-align: left; color: #718096;">TVA ({{ tva_taux }}%)</td>
+                <td style="text-align: right; font-weight: 600;">{{ total_tva }} €</td>
+            </tr>
+            <tr class="final-total">
+                <td style="text-align: left;">Total TTC</td>
+                <td style="text-align: right;">{{ total_ttc }} €</td>
+            </tr>
+        </table>
+    </div>
+
+    {% if type_document == "DEVIS" %}
+    <div class="signature-block">
+        <div class="sig-box">
+            <strong>Pour l'entreprise B SERVICE</strong><br>
+            Bon pour accord
+        </div>
+        <div class="sig-box">
+            <strong>Pour le Client : {{ client.nom }}</strong><br>
+            Mention manuscrite "Bon pour accord et exécution du devis"<br>
+            Date et Signature :
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        B SERVICE — Vitry-sur-Seine, France — SIRET en cours — Mentions légales applicables à l'installation d'extraction.
+    </div>
+
+</body>
+</html>
