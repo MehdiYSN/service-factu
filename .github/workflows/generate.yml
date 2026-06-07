@@ -1,0 +1,36 @@
+name: Génération automatique de PDF
+
+on:
+  push:
+    paths:
+      - 'data.json' # Le script se déclenche uniquement si vous modifiez le JSON
+  workflow_dispatch: # Permet aussi de lancer la génération manuellement
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Récupérer le code du dépôt
+      uses: actions/checkout@v4
+
+    - name: Installer Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Installer les dépendances système et Python
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y weasyprint
+        pip install jinja2 weasyprint
+
+    - name: Exécuter le script de génération
+      run: python generate_pdf.py
+
+    - name: Sauvegarder le PDF généré (Téléchargement)
+      uses: actions/upload-artifact@v4
+      with:
+        name: Documents-PDF-Generes
+        path: "*.pdf"
+        retention-days: 5 # Le fichier reste téléchargeable pendant 5 jours
