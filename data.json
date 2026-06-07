@@ -10,27 +10,27 @@
   },
   "articles": [
     {
-      "quantite": "",
+      "quantite": "01",
       "designation": "FOURNITURE ET POSE DE SYSTEMES D'EXTRACTION",
       "pu_ht": ""
     },
     {
-      "quantite": "",
-      "designation": "- Réseau aéraulique en acier galvanisé classé résistant au feu M0 (diamètre 315mm en extérieur)",
+      "quantite": "01",
+      "designation": " Réseau aéraulique en acier galvanisé classé résistant au feu M0 (diamètre 315mm en extérieur)",
       "pu_ht": ""
     },
     {
-      "quantite": "",
-      "designation": "- Tourelle d'extraction classée résistante au feu (classe F400/120)",
+      "quantite": "01",
+      "designation": " Tourelle d'extraction classée résistante au feu (classe F400/120)",
       "pu_ht": ""
     },
     {
-      "quantite": "",
-      "designation": "- Autotransformateur 5 vitesses avec coup de poing de désenfumage",
+      "quantite": "01",
+      "designation": " Autotransformateur 5 vitesses avec coup de poing de désenfumage",
       "pu_ht": ""
     },
     {
-      "quantite": "",
+      "quantite": "01",
       "designation": "- Câble d'alimentation électrique incendie CR1 3g2.5",
       "pu_ht": ""
     }
