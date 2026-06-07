@@ -1,34 +1,41 @@
 {
   "type_document": "DEVIS",
   "numero": "DE000011",
-  "date": "09/06/2026",
+  "date": "08/06/2026",
   "validite": "30 Jours",
   "client": {
-    "nom": "G LA DALLE n mehdi",
-    "adresse": "11 b av auguste rodin",
+    "nom": "G LA DALLE",
+    "adresse": "85 av maurice thorez",
     "code_postal_ville": "94200 IVRY SUR SEINE"
   },
   "articles": [
     {
-      "quantite": "01",
-      "designation": "Réseau aéraulique en acier galvanisé classé résistant au feu M0 (diamètre 315mm en extérieur)",
+      "quantite": "",
+      "designation": "FOURNITURE ET POSE DE SYSTEMES D'EXTRACTION",
       "pu_ht": ""
     },
     {
-      "quantite": "01",
-      "designation": "Tourelle d'extraction classée résistante au feu (classe F400/120)",
+      "quantite": "",
+      "designation": "- Réseau aéraulique en acier galvanisé classé résistant au feu M0 (diamètre 315mm en extérieur)",
       "pu_ht": ""
     },
     {
-      "quantite": "01",
-      "designation": "Autotransformateur 5 vitesses avec coup de poing de désenfumage",
+      "quantite": "",
+      "designation": "- Tourelle d'extraction classée résistante au feu (classe F400/120)",
       "pu_ht": ""
     },
     {
-      "quantite": "01",
-      "designation": "Câble d'alimentation électrique incendie CR1 3g2.5",
+      "quantite": "",
+      "designation": "- Autotransformateur 5 vitesses avec coup de poing de désenfumage",
+      "pu_ht": ""
+    },
+    {
+      "quantite": "",
+      "designation": "- Câble d'alimentation électrique incendie CR1 3g2.5",
       "pu_ht": ""
     }
   ],
-  "tva_taux": 0
+  "total_ht_manuel": "15090.00",
+  "tva_taux": "0",
+  "tva_manuelle": ""
 }
