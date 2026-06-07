@@ -36,6 +36,6 @@
     }
   ],
   "total_ht_manuel": "15090.00",
-  "tva_taux": "0",
-  "tva_manuelle": "0"
+  "tva_taux": "",
+  "tva_manuelle": ""
 }
