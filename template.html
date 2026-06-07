@@ -33,7 +33,7 @@
         .brand-name {
             font-size: 26px;
             font-weight: 800;
-            color: #0052cc; /* Bleu Royal */
+            color: #0052cc; /* Bleu Royal Pro */
             letter-spacing: -0.5px;
             margin-bottom: 5px;
             text-transform: uppercase;
@@ -78,11 +78,11 @@
         }
         .client-section {
             background-color: #f7fafc;
-            border-right: 4px solid #0052cc; /* Bordure bleue à droite */
+            border-right: 4px solid #0052cc; /* Bordure bleue pro à droite */
             border-radius: 6px 0 0 6px;
             padding: 12px 18px;
             width: 45%;
-            text-align: right; /* Tout le texte aligné à droite */
+            text-align: right; /* Alignement du texte à droite */
         }
         .client-label {
             font-size: 10px;
@@ -94,7 +94,7 @@
         }
         .client-name {
             font-size: 15px;
-            font-weight: 800;
+            font-weight: 800; /* Nom du client bien en gras */
             color: #1a202c;
             margin-bottom: 2px;
         }
@@ -102,22 +102,24 @@
             color: #4a5568;
             font-size: 12px;
             margin: 0;
+            line-height: 1.4;
         }
 
-        /* TABLEAU D'ARTICLES */
+        /* TABLEAU D'ARTICLES PREMIUM */
         table.items-table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
         table.items-table th {
-            background-color: #0052cc;
+            background-color: #0052cc; /* Bandeau couleur Bleu Royal */
             color: #ffffff;
             font-weight: 700;
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             padding: 10px 12px;
+            border: none;
         }
         table.items-table th.align-center { text-align: center; }
         table.items-table th.align-right { text-align: right; }
@@ -129,16 +131,17 @@
             font-size: 12.5px;
             color: #4a5568;
         }
+        /* Lignes alternées pour un effet comptable pro */
         table.items-table tr:nth-child(even) td {
             background-color: #fcfdfd;
         }
-        .cell-qty { width: 8%; text-align: center; font-weight: 700; color: #1a202c; }
+        .cell-qty { width: 8%; text-align: center; font-weight: 800; color: #1a202c; }
         .cell-desc { width: 56%; line-height: 1.4; color: #2d3748; }
         .cell-desc strong { color: #1a202c; font-weight: 600; }
-        .cell-price { width: 16%; text-align: right; white-space: nowrap; }
-        .cell-total { width: 20%; text-align: right; font-weight: 700; color: #1a202c; white-space: nowrap; }
+        .cell-price { width: 16%; text-align: right; white-space: nowrap; font-weight: 600; }
+        .cell-total { width: 20%; text-align: right; font-weight: 800; color: #1a202c; white-space: nowrap; }
 
-        /* BLOC TOTAUX */
+        /* BLOC TOTAUX MIS EN VALEUR */
         .totals-wrapper {
             display: flex;
             justify-content: flex-end;
@@ -163,6 +166,7 @@
             font-weight: 600;
             color: #2d3748;
         }
+        /* Ligne de Total Général TTC */
         .totals-table tr.grand-total td {
             padding-top: 10px;
             border-top: 2px solid #0052cc;
@@ -173,9 +177,9 @@
             color: #1a202c;
         }
         .totals-table tr.grand-total .value {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 800;
-            color: #0052cc;
+            color: #0052cc; /* Montant final en gros bleu gras */
         }
 
         /* Zone de signatures compacte */
@@ -207,7 +211,7 @@
             display: block;
         }
 
-        /* Pied de page légal */
+        /* Pied de page légal fixe tout en bas */
         .invoice-footer {
             position: absolute;
             bottom: 0;
@@ -222,7 +226,6 @@
 </head>
 <body>
 
-    <!-- En-tête -->
     <div class="invoice-header">
         <div class="company-panel">
             <div class="brand-name">B Service</div>
@@ -243,7 +246,6 @@
         </div>
     </div>
 
-    <!-- Section Client ALIGNÉE À DROITE -->
     <div class="client-container">
         <div class="client-section">
             <div class="client-label">Adressé à</div>
@@ -255,7 +257,6 @@
         </div>
     </div>
 
-    <!-- Tableau d'articles -->
     <table class="items-table">
         <thead>
             <tr>
@@ -270,32 +271,30 @@
             <tr>
                 <td class="cell-qty">{{ item.quantite }}</td>
                 <td class="cell-desc"><strong>{{ item.designation }}</strong></td>
-                <td class="cell-price">{{ item.pu_ht_formate }} €</td>
-                <td class="cell-total">{{ item.total_ht_formate }} €</td>
+                <td class="cell-price">{{ item.pu_ht_formate }}</td>
+                <td class="cell-total">{{ item.total_ht_formate }}</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 
-    <!-- Bloc des Totaux -->
     <div class="totals-wrapper">
         <table class="totals-table">
             <tr>
                 <td class="label">Total Général HT</td>
-                <td class="value">{{ total_ht }} €</td>
+                <td class="value">{{ total_ht }}</td>
             </tr>
             <tr>
                 <td class="label">TVA ({{ tva_taux }}%)</td>
-                <td class="value">{{ total_tva }} €</td>
+                <td class="value">{{ total_tva }}</td>
             </tr>
             <tr class="grand-total">
                 <td class="label">Total TTC</td>
-                <td class="value">{{ total_ttc }} €</td>
+                <td class="value">{{ total_ttc }}</td>
             </tr>
         </table>
     </div>
 
-    <!-- Bloc Signatures -->
     {% if type_document == "DEVIS" %}
     <div class="signature-area">
         <div class="signature-card">
@@ -310,7 +309,6 @@
     </div>
     {% endif %}
 
-    <!-- Mentions Légales Pied de Page -->
     <div class="invoice-footer">
         B SERVICE — Vitry-sur-Seine, France — TVA non applicable, art. 293 B du CGI<br>
         <span style="font-size: 9px; color: #cbd5e0; margin-top: 3px; display: block;">Généré automatiquement via B-Service Facturation Core.</span>
