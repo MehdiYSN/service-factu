@@ -3,12 +3,16 @@ name: Génération automatique de PDF
 on:
   push:
     paths:
-      - 'data.json' # Le script se déclenche uniquement si vous modifiez le JSON
-  workflow_dispatch: # Permet aussi de lancer la génération manuellement
+      - 'data.json' # Se déclenche uniquement si vous modifiez le JSON
+  workflow_dispatch: # Permet de lancer la génération manuellement
 
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
+
+    # Résout l'avertissement en forçant l'utilisation de Node 24 pour l'environnement
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
     steps:
     - name: Récupérer le code du dépôt
@@ -33,4 +37,4 @@ jobs:
       with:
         name: Documents-PDF-Generes
         path: "*.pdf"
-        retention-days: 5 # Le fichier reste téléchargeable pendant 5 jours
+        retention-days: 5
