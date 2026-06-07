@@ -10,20 +10,21 @@
         }
         
         body { 
-            font-family: 'Segoe UI', Helvetica, Arial, sans-serif; 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
             color: #2d3748; 
             font-size: 13px; 
             line-height: 1.5;
             margin: 0;
             padding: 0;
+            -webkit-print-color-adjust: exact;
         }
 
-        /* En-tête principal */
+        /* En-tête principal épuré */
         .invoice-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         /* Infos de votre entreprise (B SERVICE) */
@@ -31,20 +32,20 @@
             width: 50%;
         }
         .brand-name {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 800;
             color: #0052cc; /* Bleu Royal Pro */
             letter-spacing: -0.5px;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             text-transform: uppercase;
         }
         .company-details {
-            color: #718096;
-            font-size: 12px;
+            color: #4a5568;
+            font-size: 12.5px;
             line-height: 1.4;
         }
 
-        /* Bloc Métadonnées (Numéro, Date, etc.) */
+        /* Bloc Métadonnées avec Badge Moderne */
         .meta-panel {
             text-align: right;
             width: 45%;
@@ -53,179 +54,192 @@
             display: inline-block;
             background-color: #e6f0ff;
             color: #0052cc;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 800;
-            padding: 4px 12px;
-            border-radius: 6px;
+            padding: 6px 16px;
+            border-radius: 20px; /* Badge arrondi moderne */
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
         .meta-grid {
             color: #4a5568;
             font-size: 13px;
+            line-height: 1.5;
         }
         .meta-grid strong {
             color: #1a202c;
             font-weight: 700;
         }
 
-        /* Section Client - Alignée complètement à droite */
+        /* Section Client - Design Minimaliste à droite */
         .client-container {
             display: flex;
             justify-content: flex-end;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
         .client-section {
-            background-color: #f7fafc;
-            border-right: 4px solid #0052cc; /* Bordure bleue pro à droite */
-            border-radius: 6px 0 0 6px;
-            padding: 12px 18px;
-            width: 45%;
-            text-align: right; /* Alignement du texte à droite */
+            background-color: #f8fafc; /* Fond très clair moderne */
+            border-right: 4px solid #0052cc; /* Ligne de structure Bleue */
+            border-radius: 4px 0 0 4px;
+            padding: 16px 20px;
+            width: 42%;
+            text-align: right;
         }
         .client-label {
             font-size: 10px;
             text-transform: uppercase;
-            color: #a0aec0;
+            color: #718096;
             font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
+            letter-spacing: 1.2px;
+            margin-bottom: 6px;
         }
         .client-name {
-            font-size: 15px;
-            font-weight: 800; /* Nom du client bien en gras */
+            font-size: 16px;
+            font-weight: 800;
             color: #1a202c;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
         }
         .client-address {
             color: #4a5568;
-            font-size: 12px;
+            font-size: 12.5px;
             margin: 0;
             line-height: 1.4;
         }
 
-        /* TABLEAU D'ARTICLES PREMIUM */
+        /* TABLEAU D'ARTICLES DESIGN STYLE ÉPURÉ */
         table.items-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         table.items-table th {
-            background-color: #0052cc; /* Bandeau couleur Bleu Royal */
+            background-color: #0052cc;
             color: #ffffff;
             font-weight: 700;
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 10px 12px;
+            letter-spacing: 0.8px;
+            padding: 12px 14px;
             border: none;
         }
         table.items-table th.align-center { text-align: center; }
         table.items-table th.align-right { text-align: right; }
         
         table.items-table td {
-            padding: 12px 12px;
-            border-bottom: 1px solid #e2e8f0;
+            padding: 14px 14px;
+            border-bottom: 1px solid #edf2f7; /* Lignes fines et discrètes */
             vertical-align: top;
-            font-size: 12.5px;
-            color: #4a5568;
+            font-size: 13px;
+            color: #2d3748;
         }
-        /* Lignes alternées */
+        /* Effet de rangées alternées très discret */
         table.items-table tr:nth-child(even) td {
             background-color: #fcfdfd;
         }
         .cell-qty { width: 8%; text-align: center; font-weight: 800; color: #1a202c; }
-        .cell-desc { width: 56%; line-height: 1.4; color: #2d3748; }
-        .cell-desc strong { color: #1a202c; font-weight: 600; }
-        .cell-price { width: 16%; text-align: right; white-space: nowrap; font-weight: 600; }
+        .cell-desc { width: 56%; line-height: 1.5; }
+        .cell-desc strong { color: #1a202c; font-weight: 700; }
+        .cell-price { width: 16%; text-align: right; white-space: nowrap; font-weight: 600; color: #4a5568; }
         .cell-total { width: 20%; text-align: right; font-weight: 800; color: #1a202c; white-space: nowrap; }
 
-        /* BLOC TOTAUX MIS EN VALEUR */
+        /* BLOC TOTAUX HAUT DE GAMME (Effet encadré) */
         .totals-wrapper {
             display: flex;
             justify-content: flex-end;
-            margin-top: 10px;
-            margin-bottom: 30px;
+            margin-top: 15px;
+            margin-bottom: 35px;
+        }
+        .totals-box {
+            width: 38%;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
         }
         .totals-table {
-            width: 35%;
+            width: 100%;
             border-collapse: collapse;
         }
         .totals-table td {
-            padding: 6px 8px;
-            border: none;
-            font-size: 12.5px;
+            padding: 10px 14px;
+            font-size: 13px;
         }
         .totals-table .label {
             text-align: left;
-            color: #718096;
+            color: #4a5568;
         }
         .totals-table .value {
             text-align: right;
-            font-weight: 600;
-            color: #2d3748;
+            font-weight: 700;
+            color: #1a202c;
         }
-        /* Ligne de Total Général TTC */
+        /* Ligne de Total TTC mise en avant */
         .totals-table tr.grand-total td {
-            padding-top: 10px;
-            border-top: 2px solid #0052cc;
+            background-color: #0052cc;
+            padding: 12px 14px;
         }
         .totals-table tr.grand-total .label {
             font-size: 14px;
             font-weight: 800;
-            color: #1a202c;
+            color: #ffffff;
         }
         .totals-table tr.grand-total .value {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 800;
-            color: #0052cc; /* Montant final en gros bleu gras */
+            color: #ffffff; /* Prix blanc sur fond bleu pro */
         }
 
-        /* Zone de signatures compacte */
+        /* Zone de signatures professionnelle */
         .signature-area {
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
+            margin-top: 30px;
             page-break-inside: avoid;
         }
         .signature-card {
             width: 46%;
             border: 1px solid #e2e8f0;
             border-radius: 6px;
-            background-color: #f7fafc;
-            padding: 12px;
-            min-height: 90px;
-            font-size: 11.5px;
+            background-color: #f8fafc;
+            padding: 14px;
+            min-height: 100px;
+            font-size: 12px;
         }
         .signature-card strong {
             color: #1a202c;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.5px;
         }
         .mention-text {
             font-style: italic;
             color: #718096;
-            margin-top: 8px;
+            margin-top: 10px;
             display: block;
+            line-height: 1.4;
         }
 
-        /* Pied de page légal fixe tout en bas */
+        /* Pied de page légal fixe et propre */
         .invoice-footer {
             position: absolute;
             bottom: 0;
             width: 100%;
             text-align: center;
-            font-size: 10.5px;
-            color: #a0aec0;
+            font-size: 11px;
+            color: #718096;
             border-top: 1px solid #e2e8f0;
-            padding-top: 10px;
+            padding-top: 12px;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
 
+    <!-- En-tête : Informations d'entreprise & Badge -->
     <div class="invoice-header">
         <div class="company-panel">
             <div class="brand-name">B Service</div>
@@ -246,6 +260,7 @@
         </div>
     </div>
 
+    <!-- Section Client : Alignée proprement sur la droite -->
     <div class="client-container">
         <div class="client-section">
             <div class="client-label">Adressé à</div>
@@ -257,6 +272,7 @@
         </div>
     </div>
 
+    <!-- Tableau d'articles épuré -->
     <table class="items-table">
         <thead>
             <tr>
@@ -278,37 +294,42 @@
         </tbody>
     </table>
 
+    <!-- Bloc des Totaux mis en valeur -->
     <div class="totals-wrapper">
-        <table class="totals-table">
-            <tr>
-                <td class="label">Total Général HT</td>
-                <td class="value">{{ total_ht }}</td>
-            </tr>
-            <tr>
-                <td class="label">TVA ({{ tva_taux }}%)</td>
-                <td class="value">{{ total_tva }}</td>
-            </tr>
-            <tr class="grand-total">
-                <td class="label">Total TTC</td>
-                <td class="value">{{ total_ttc }}</td>
-            </tr>
-        </table>
+        <div class="totals-box">
+            <table class="totals-table">
+                <tr>
+                    <td class="label">Total Général HT</td>
+                    <td class="value">{{ total_ht }}</td>
+                </tr>
+                <tr>
+                    <td class="label">TVA ({{ tva_taux }}%)</td>
+                    <td class="value">{{ total_tva }}</td>
+                </tr>
+                <tr class="grand-total">
+                    <td class="label">Total TTC</td>
+                    <td class="value">{{ total_ttc }}</td>
+                </tr>
+            </table>
+        </div>
     </div>
 
+    <!-- Bloc de Signatures conditionnel -->
     {% if type_document == "DEVIS" %}
     <div class="signature-area">
         <div class="signature-card">
             <strong>Pour l'entreprise B SERVICE</strong>
-            <p style="color: #718096; margin: 0;">Document validé.<br>Prêt pour exécution.</p>
+            <p style="color: #4a5568; margin: 0; margin-top: 5px;">Document validé officiellement.<br>Prêt pour exécution des travaux.</p>
         </div>
         <div class="signature-card">
             <strong>Pour le Client : {{ client.nom }}</strong>
-            <span class="mention-text">Mention manuscrite obligatoire : "Bon pour accord et exécution du devis"</span>
-            <div style="margin-top: 15px; color: #a0aec0;">Date, Cachet et Signature :</div>
+            <span class="mention-text">Mention manuscrite obligatoire : <br>"Bon pour accord et exécution du devis"</span>
+            <div style="margin-top: 15px; color: #a0aec0; font-size: 11px;">Date, Cachet et Signature :</div>
         </div>
     </div>
     {% endif %}
 
+    <!-- Pied de page légal corporatif -->
     <div class="invoice-footer">
         B SERVICE — Vitry-sur-Seine, France — TVA non applicable, art. 293 B du CGI
     </div>
