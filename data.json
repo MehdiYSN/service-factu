@@ -1,6 +1,6 @@
 {
-  "type_document": "DEVIS",
-  "numero": "DE000011",
+  "type_document": "FACTURE",
+  "numero": "FA000011",
   "date": "08/06/2026",
   "validite": "30 Jours",
   "client": {
@@ -36,6 +36,6 @@
     }
   ],
   "total_ht_manuel": "15090.00",
-  "tva_taux": "00",
+  "tva_taux": "20",
   "tva_manuelle": ""
 }
