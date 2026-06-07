@@ -14,6 +14,16 @@ def formater_prix(valeur):
 def generer_facture():
     data = charger_donnees()
     
+    # Force le type de document en MAJUSCULE pour éviter les erreurs de saisie
+    type_doc = str(data.get('type_document', 'DEVIS')).upper()
+    data['type_document'] = type_doc
+
+    # Attribution automatique de la couleur du badge selon le type de document
+    if "FACTURE" in type_doc:
+        data['badge_couleur'] = "badge-vert"
+    else:
+        data['badge_couleur'] = "badge-bleu"
+
     # 1. Analyse et nettoyage des articles du tableau
     total_calcule_lignes = 0.0
     for item in data['articles']:
@@ -32,13 +42,11 @@ def generer_facture():
         ligne_total = qte * pu
         total_calcule_lignes += ligne_total
         
-        # Masquage ou affichage propre des prix unitaires
         if pu_brut == "":
             item['pu_ht_formate'] = ""
         else:
             item['pu_ht_formate'] = formater_prix(pu) + " €"
 
-        # Masquage ou affichage propre des quantités et sous-totaux de ligne
         if qte_brute == "" or qte == 0:
             item['quantite'] = ""
             item['total_ht_formate'] = ""
@@ -48,9 +56,8 @@ def generer_facture():
             else:
                 item['total_ht_formate'] = formater_prix(ligne_total) + " €"
 
-    # 2. Gestion du Total HT Global (Prend le manuel en priorité si présent)
+    # 2. Gestion du Total HT Global
     total_ht_manuel_brut = str(data.get('total_ht_manuel', '')).strip()
-    
     if total_ht_manuel_brut != "":
         try:
             total_ht = float(total_ht_manuel_brut)
@@ -66,7 +73,6 @@ def generer_facture():
     except ValueError:
         tva_taux = 0.0
         
-    # Gestion de la TVA (manuelle ou calculée automatiquement)
     tva_manuelle_brut = str(data.get('tva_manuelle', '')).strip()
     if tva_manuelle_brut != "":
         try:
@@ -76,33 +82,25 @@ def generer_facture():
     else:
         total_tva = total_ht * (tva_taux / 100)
         
-    # Calcul du montant total Toutes Taxes Comprises
     total_ttc = total_ht + total_tva
     
-    # 4. Préparation des variables pour l'affichage final dans le HTML
+    # 4. Formatage final des montants
     data['total_ht'] = formater_prix(total_ht) + " €" if total_ht > 0 else "0,00 €"
-    
-    # MODIFICATION : Affiche toujours 0,00 € si la TVA est égale à 0
-    if total_tva > 0:
-        data['total_tva'] = formater_prix(total_tva) + " €"
-    else:
-        data['total_tva'] = "0,00 €"
-        
+    data['total_tva'] = formater_prix(total_tva) + " €" if total_tva > 0 else "0,00 €"
     data['total_ttc'] = formater_prix(total_ttc) + " €" if total_ttc > 0 else "0,00 €"
     data['tva_taux'] = int(tva_taux) if tva_taux.is_integer() else tva_taux
 
-    # 5. Lecture du template HTML et rendu final
+    # 5. Rendu et enregistrement
     with open('template.html', 'r', encoding='utf-8') as f:
         html_template = f.read()
         
     template = Template(html_template)
     html_rendu = template.render(data)
     
-    # Création du fichier PDF final
-    nom_fichier = f"{data.get('type_document', 'DOCUMENT')}_{data.get('numero', '0000')}.pdf"
-    print(f"Génération du document professionnel : {nom_fichier}...")
+    nom_fichier = f"{type_doc.replace(' ', '_')}_{data.get('numero', '0000')}.pdf"
+    print(f"Génération dynamique : {nom_fichier}...")
     HTML(string=html_rendu).write_pdf(nom_fichier)
-    print("Document créé avec succès !")
+    print("Succès !")
 
 if __name__ == "__main__":
     generer_facture()
