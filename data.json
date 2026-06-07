@@ -1,0 +1,34 @@
+{
+  "type_document": "DEVIS",
+  "numero": "DE000011",
+  "date": "08/06/2026",
+  "validite": "30 Jours",
+  "client": {
+    "nom": "G LA DALLE",
+    "adresse": "85 av maurice thorez",
+    "code_postal_ville": "94200 IVRY SUR SEINE"
+  },
+  "articles": [
+    {
+      "quantite": "01",
+      "designation": "Réseau aéraulique en acier galvanisé classé résistant au feu M0 (diamètre 315mm en extérieur)",
+      "pu_ht": "6500.00"
+    },
+    {
+      "quantite": "01",
+      "designation": "Tourelle d'extraction classée résistante au feu (classe F400/120)",
+      "pu_ht": "5200.00"
+    },
+    {
+      "quantite": "01",
+      "designation": "Autotransformateur 5 vitesses avec coup de poing de désenfumage",
+      "pu_ht": "2190.00"
+    },
+    {
+      "quantite": "01",
+      "designation": "Câble d'alimentation électrique incendie CR1 3g2.5",
+      "pu_ht": "1200.00"
+    }
+  ],
+  "tva_taux": 0
+}
