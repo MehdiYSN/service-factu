@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        /* Configuration de la page A4 fluide */
+        /* Configuration stricte de la page A4 pour forcer une seule page */
         @page { 
             size: A4; 
-            margin: 20mm 15mm 20mm 15mm; 
+            margin: 15mm 15mm 15mm 15mm; 
         }
         
         body { 
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif; 
             color: #2d3748; 
             font-size: 13px; 
             line-height: 1.5;
@@ -27,40 +27,40 @@
             margin-bottom: 30px;
         }
 
+        /* Infos de votre entreprise (B SERVICE) */
         .company-panel {
             width: 50%;
         }
         .brand-name {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
-            color: #0052cc; 
+            color: #0052cc; /* Bleu Royal Pro */
             letter-spacing: -0.5px;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             text-transform: uppercase;
         }
         .company-details {
-            color: #4a5568;
-            font-size: 12.5px;
+            color: #718096;
+            font-size: 12px;
             line-height: 1.4;
         }
 
-        /* Bloc Métadonnées avec Badge Dynamique */
+        /* Bloc Métadonnées (Numéro, Date, etc.) avec couleurs dynamiques */
         .meta-panel {
             text-align: right;
             width: 45%;
         }
-        
-        /* Classes de couleurs dynamiques selon le type de document */
         .doc-type-badge {
             display: inline-block;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 800;
-            padding: 6px 16px;
-            border-radius: 20px;
+            padding: 5px 14px;
+            border-radius: 6px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
+        /* Classes de couleurs gérées par le script Python */
         .badge-bleu { background-color: #e6f0ff; color: #0052cc; }
         .badge-vert { background-color: #e6fffa; color: #319795; }
 
@@ -73,146 +73,139 @@
             font-weight: 700;
         }
 
-        /* Section Client à droite */
+        /* Section Client - Alignée complètement à droite */
         .client-container {
             display: flex;
             justify-content: flex-end;
             margin-bottom: 35px;
         }
         .client-section {
-            background-color: #f8fafc; 
-            border-right: 4px solid #0052cc; 
-            border-radius: 4px 0 0 4px;
-            padding: 16px 20px;
+            background-color: #f7fafc;
+            border-right: 4px solid #0052cc; /* Bordure bleue pro à droite */
+            border-radius: 6px 0 0 6px;
+            padding: 12px 18px;
             width: 45%;
-            text-align: right;
+            text-align: right; /* Alignement du texte à droite */
         }
         .client-label {
             font-size: 10px;
             text-transform: uppercase;
-            color: #718096;
+            color: #a0aec0;
             font-weight: 700;
-            letter-spacing: 1.2px;
-            margin-bottom: 6px;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
         }
         .client-name {
-            font-size: 16px;
-            font-weight: 800;
+            font-size: 15px;
+            font-weight: 800; /* Nom du client bien en gras */
             color: #1a202c;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         .client-address {
             color: #4a5568;
-            font-size: 12.5px;
+            font-size: 12px;
             margin: 0;
             line-height: 1.4;
         }
 
-        /* TABLEAU D'ARTICLES */
+        /* TABLEAU D'ARTICLES PREMIUM */
         table.items-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         table.items-table th {
-            background-color: #0052cc;
+            background-color: #0052cc; /* Bandeau couleur Bleu Royal */
             color: #ffffff;
             font-weight: 700;
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            padding: 12px 14px;
+            letter-spacing: 0.5px;
+            padding: 10px 12px;
+            border: none;
         }
         table.items-table th.align-center { text-align: center; }
         table.items-table th.align-right { text-align: right; }
         
         table.items-table td {
-            padding: 12px 14px;
-            border-bottom: 1px solid #edf2f7; 
+            padding: 12px 12px;
+            border-bottom: 1px solid #e2e8f0;
             vertical-align: top;
-            font-size: 13px;
-            color: #2d3748;
+            font-size: 12.5px;
+            color: #4a5568;
         }
+        /* Lignes alternées pour un effet comptable pro */
         table.items-table tr:nth-child(even) td {
             background-color: #fcfdfd;
         }
         .cell-qty { width: 8%; text-align: center; font-weight: 800; color: #1a202c; }
-        .cell-desc { width: 56%; line-height: 1.5; }
-        .cell-desc strong { color: #1a202c; font-weight: 700; }
-        .cell-price { width: 16%; text-align: right; white-space: nowrap; font-weight: 600; color: #4a5568; }
+        .cell-desc { width: 56%; line-height: 1.4; color: #2d3748; }
+        .cell-desc strong { color: #1a202c; font-weight: 600; }
+        .cell-price { width: 16%; text-align: right; white-space: nowrap; font-weight: 600; }
         .cell-total { width: 20%; text-align: right; font-weight: 800; color: #1a202c; white-space: nowrap; }
 
-        /* BLOC TOTAUX MODERNE */
+        /* BLOC TOTAUX MIS EN VALEUR */
         .totals-wrapper {
             display: flex;
             justify-content: flex-end;
-            margin-top: 15px;
+            margin-top: 10px;
             margin-bottom: 30px;
-            page-break-inside: avoid; /* Empêche le bloc total de se couper en deux */
-        }
-        .totals-box {
-            width: 40%;
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            overflow: hidden;
         }
         .totals-table {
-            width: 100%;
+            width: 35%;
             border-collapse: collapse;
         }
         .totals-table td {
-            padding: 10px 14px;
-            font-size: 13px;
+            padding: 6px 8px;
+            border: none;
+            font-size: 12.5px;
         }
         .totals-table .label {
             text-align: left;
-            color: #4a5568;
+            color: #718096;
         }
         .totals-table .value {
             text-align: right;
-            font-weight: 700;
-            color: #1a202c;
+            font-weight: 600;
+            color: #2d3748;
         }
+        /* Ligne de Total Général TTC */
         .totals-table tr.grand-total td {
-            background-color: #0052cc;
-            padding: 12px 14px;
+            padding-top: 10px;
+            border-top: 2px solid #0052cc;
         }
         .totals-table tr.grand-total .label {
             font-size: 14px;
             font-weight: 800;
-            color: #ffffff;
+            color: #1a202c;
         }
         .totals-table tr.grand-total .value {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 800;
-            color: #ffffff; 
+            color: #0052cc; /* Montant final en gros bleu gras */
         }
 
-        /* ZONE SIGNATURES */
+        /* Zone de signatures compacte */
         .signature-area {
             display: flex;
             justify-content: space-between;
-            margin-top: 30px;
-            margin-bottom: 40px;
-            page-break-inside: avoid; /* Reste soudé sur la même page */
+            margin-top: 20px;
+            page-break-inside: avoid;
         }
         .signature-card {
             width: 46%;
             border: 1px solid #e2e8f0;
             border-radius: 6px;
-            background-color: #f8fafc;
-            padding: 14px;
-            min-height: 95px;
-            font-size: 12px;
+            background-color: #f7fafc;
+            padding: 12px;
+            min-height: 90px;
+            font-size: 11.5px;
         }
         .signature-card strong {
             color: #1a202c;
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             font-weight: 700;
-            text-transform: uppercase;
-            font-size: 11px;
         }
         .mention-text {
             font-style: italic;
@@ -221,22 +214,22 @@
             display: block;
         }
 
-        /* PIED DE PAGE FLUIDE (Se met naturellement à la fin du texte) */
+        /* Pied de page légal fixe tout en bas */
         .invoice-footer {
-            margin-top: 40px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
             text-align: center;
-            font-size: 11px;
-            color: #718096;
+            font-size: 10.5px;
+            color: #a0aec0;
             border-top: 1px solid #e2e8f0;
-            padding-top: 15px;
-            font-weight: 500;
-            page-break-inside: avoid;
+            padding-top: 10px;
         }
     </style>
 </head>
 <body>
 
-    <!-- En-tête -->
+    <!-- En-tête : Vos informations d'entreprise & Type de Document -->
     <div class="invoice-header">
         <div class="company-panel">
             <div class="brand-name">B Service</div>
@@ -248,7 +241,7 @@
             </div>
         </div>
         <div class="meta-panel">
-            <!-- Utilisation de la classe de couleur dynamique -->
+            <!-- La couleur du badge s'adapte automatiquement sans casser le design -->
             <div class="doc-type-badge {{ badge_couleur }}">{{ type_document }}</div>
             <div class="meta-grid">
                 <strong>Numéro :</strong> {{ numero }}<br>
@@ -258,7 +251,7 @@
         </div>
     </div>
 
-    <!-- Client -->
+    <!-- Section Client : Alignée sur la droite de la feuille -->
     <div class="client-container">
         <div class="client-section">
             <div class="client-label">Adressé à</div>
@@ -270,7 +263,7 @@
         </div>
     </div>
 
-    <!-- Tableau -->
+    <!-- Tableau d'articles -->
     <table class="items-table">
         <thead>
             <tr>
@@ -292,42 +285,40 @@
         </tbody>
     </table>
 
-    <!-- Totaux -->
+    <!-- Bloc des Totaux Généraux -->
     <div class="totals-wrapper">
-        <div class="totals-box">
-            <table class="totals-table">
-                <tr>
-                    <td class="label">Total Général HT</td>
-                    <td class="value">{{ total_ht }}</td>
-                </tr>
-                <tr>
-                    <td class="label">TVA ({{ tva_taux }}%)</td>
-                    <td class="value">{{ total_tva }}</td>
-                </tr>
-                <tr class="grand-total">
-                    <td class="label">Total TTC</td>
-                    <td class="value">{{ total_ttc }}</td>
-                </tr>
-            </table>
-        </div>
+        <table class="totals-table">
+            <tr>
+                <td class="label">Total Général HT</td>
+                <td class="value">{{ total_ht }}</td>
+            </tr>
+            <tr>
+                <td class="label">TVA ({{ tva_taux }}%)</td>
+                <td class="value">{{ total_tva }}</td>
+            </tr>
+            <tr class="grand-total">
+                <td class="label">Total TTC</td>
+                <td class="value">{{ total_ttc }}</td>
+            </tr>
+        </table>
     </div>
 
-    <!-- Zone Signatures : Affichée uniquement pour les Devis -->
+    <!-- Bloc de Signatures (S'affiche uniquement si c'est un DEVIS) -->
     {% if "DEVIS" in type_document %}
     <div class="signature-area">
         <div class="signature-card">
             <strong>Pour l'entreprise B SERVICE</strong>
-            <p style="color: #4a5568; margin: 0; margin-top: 5px;">Document validé officiellement.<br>Prêt pour exécution des travaux.</p>
+            <p style="color: #718096; margin: 0;">Document validé.<br>Prêt pour exécution.</p>
         </div>
         <div class="signature-card">
             <strong>Pour le Client : {{ client.nom }}</strong>
-            <span class="mention-text">Mention manuscrite obligatoire : <br>"Bon pour accord et exécution du devis"</span>
+            <span class="mention-text">Mention manuscrite obligatoire : "Bon pour accord et exécution du devis"</span>
             <div style="margin-top: 15px; color: #a0aec0;">Date, Cachet et Signature :</div>
         </div>
     </div>
     {% endif %}
 
-    <!-- Pied de page -->
+    <!-- Mentions Légales Pied de Page -->
     <div class="invoice-footer">
         B SERVICE — Vitry-sur-Seine, France — TVA non applicable, art. 293 B du CGI
     </div>
