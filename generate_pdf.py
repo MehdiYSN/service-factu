@@ -82,10 +82,9 @@ def generer_facture():
     # 4. Préparation des variables pour l'affichage final dans le HTML
     data['total_ht'] = formater_prix(total_ht) + " €" if total_ht > 0 else "0,00 €"
     
+    # MODIFICATION : Affiche toujours 0,00 € si la TVA est égale à 0
     if total_tva > 0:
         data['total_tva'] = formater_prix(total_tva) + " €"
-    elif tva_taux == 0:
-        data['total_tva'] = "TVA non applicable"
     else:
         data['total_tva'] = "0,00 €"
         
