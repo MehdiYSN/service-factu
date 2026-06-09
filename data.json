@@ -1,41 +1,57 @@
 {
   "type_document": "FACTURE",
-  "numero": "FA000011",
-  "date": "08/06/2026",
+  "numero": "FA000030",
+  "date": "09/06/2026",
   "validite": "30 Jours",
   "client": {
-    "nom": "G LA DALLE",
-    "adresse": "85 av maurice thorez",
-    "code_postal_ville": "94200 IVRY SUR SEINE"
+    "nom": "BRENDY'S VAL D'EUROPE",
+    "adresse": "14 Cr du danube",
+    "code_postal_ville": "77700 SERRIS"
   },
   "articles": [
     {
       "quantite": "",
-      "designation": "FOURNITURE ET POSE DE SYSTEMES D'EXTRACTION",
+      "designation": "INTERVENTION DE NUIT SUR FRITEUSE PROFESSIONNELLE PITCO 14 KW Model SE14TX",
       "pu_ht": ""
     },
     {
-      "quantite": "01",
-      "designation": " Réseau aéraulique en acier galvanisé classé résistant au feu M0 diamètre 315 mm en extérieur",
+      "quantite": "",
+      "designation": " - Diagnostic de panne électrique",
       "pu_ht": ""
     },
     {
-      "quantite": "01",
-      "designation": " Tourelle d'extraction classée résistant feu classe F400/120",
+      "quantite": "",
+      "designation": "- Recherche de défaut sur circuit  de commande",
       "pu_ht": ""
     },
     {
-      "quantite": "01",
-      "designation": " Autotransformateur 5 vitesses avec coup de poing de désenfumage",
+      "quantite": "",
+      "designation": "-Identification d’un court-circuit sur une partie de commande",
       "pu_ht": ""
     },
     {
-      "quantite": "01",
-      "designation": " Câble d'alimentation électrique incendie CR1 3g2.5",
+      "quantite": "",
+      "designation": "- Réparation une partie et remise en fonctionnement",
       "pu_ht": ""
-    }
+    },
+    {
+      "quantite": "",
+      "designation": "- Remplacement du transformateur (240V 24 V)défectueux",
+      "pu_ht": ""
+    },
+    {
+      "quantite": "",
+      "designation": "-Contrôle de fonctionnement après intervention",
+      "pu_ht": ""
+    },
+    {
+      "quantite": "",
+      "designation": "-Diagnostic complémentaire :la seconde 
+commande nécessite le remplacement de la carte électrique de commande (afficheur)",
+      "pu_ht", ""
+      }
   ],
-  "total_ht_manuel": "15090.00",
-  "tva_taux": "20",
+  "total_ht_manuel": "877.10",
+  "tva_taux": "0",
   "tva_manuelle": ""
 }
