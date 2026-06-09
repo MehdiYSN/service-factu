@@ -26,7 +26,7 @@
     },
     {
       "quantite": "",
-      "designation": "-Identification d’un court-circuit sur une partie de commande",
+      "designation": "- Identification d’un court-circuit sur une partie de commande",
       "pu_ht": ""
     },
     {
@@ -41,12 +41,12 @@
     },
     {
       "quantite": "",
-      "designation": "-Contrôle de fonctionnement après intervention",
+      "designation": "- Contrôle de fonctionnement après intervention",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "-Diagnostic complémentaire :la seconde 
+      "designation": "- Diagnostic complémentaire: la seconde 
 commande nécessite le remplacement de la carte électrique de commande (afficheur)",
       "pu_ht", ""
       }
