@@ -11,7 +11,7 @@
   "articles": [
     {
       "quantite": "",
-      "designation": "INTERVENTION DE NUIT SUR FRITEUSE PROFESSIONNELLE PITCO 14 KW Model SE14TX",
+      "designation": "INTERVENTION DE NUIT SUR UN MOTEUR DE VMC",
       "pu_ht": ""
     },
     {
@@ -21,7 +21,7 @@
     },
     {
       "quantite": "",
-      "designation": "- Recherche de défaut sur circuit  de commande",
+      "designation": "- Recherche de défaut sur circuit électrique",
       "pu_ht": ""
     },
     {
@@ -31,26 +31,21 @@
     },
     {
       "quantite": "",
-      "designation": "- Réparation une partie et remise en fonctionnement",
+      "designation": "- Remplacement du tranasformateur défectueux",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Remplacement du transformateur (240V 24 V) défectueux",
+      "designation": "- Reparation et remise en fonction",
       "pu_ht": ""
     },
     {
       "quantite": "",
       "designation": "- Contrôle de fonctionnement après intervention",
       "pu_ht": ""
-    },
-    {
-      "quantite": "",
-      "designation": "- Diagnostic complémentaire : la seconde commande nécessite le remplacement de la carte électrique de commande (afficheur)",
-      "pu_ht": ""
       }
   ],
-  "total_ht_manuel": "877.10",
+  "total_ht_manuel": "977.10",
   "tva_taux": "0",
   "tva_manuelle": ""
 }
