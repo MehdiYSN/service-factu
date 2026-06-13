@@ -4,44 +4,39 @@
   "date": "09/06/2026",
   "validite": "30 Jours",
   "client": {
-    "nom": "BRENDY'S VAL D'EUROPE",
-    "adresse": "14 Cr du danube",
-    "code_postal_ville": "77700 SERRIS"
+    "nom": "BRENDY'S CAFÉ VÉLIZY 2 ",
+    "adresse": "2 AVENUE De L'EUROPE,CENTRE COMMERCIAL WESTFIELD VÉLIZY",
+    "code_postal_ville": "78140 VÉLIZY"
   },
   "articles": [
     {
       "quantite": "",
-      "designation": "INTERVENTION DE NUIT SUR UN MOTEUR DE VMC",
+        "designation": "- Remplacement d'une turbine sur caisson de compensation de cuisine professionnelle après vérification complète de l'installation",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Diagnostic de panne électrique",
+      "designation": "- Vérification et contrôle du fonctionnement de l'installation de compensation d'air en cuisine",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Recherche de défaut sur circuit électrique",
+      "designation": "- Fourniture d'une turbine pour caisson de compensation",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Identification d’un court-circuit sur une partie de commande",
+      "designation": "- Dépose de la turbine défectueuse et évacuation",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Remplacement du transformateur défectueux",
+      "designation": "- Pose et raccordement de la nouvelle turbine",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Reparation et remise en fonction",
-      "pu_ht": ""
-    },
-    {
-      "quantite": "",
-      "designation": "- Contrôle de fonctionnement après intervention",
+      "designation": "- Essais,réglages et remise en service de l'installation",
       "pu_ht": ""
       }
   ],
