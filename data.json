@@ -1,11 +1,11 @@
 {
   "type_document": "FACTURE",
-  "numero": "FA000826",
-  "date": "09/06/2026",
+  "numero": "FA000827",
+  "date": "15/06/2026",
   "validite": "30 Jours",
   "client": {
     "nom": "BRENDY'S CAFÉ VÉLIZY 2 ",
-    "adresse": "2 AVENUE De L'EUROPE,CENTRE COMMERCIAL WESTFIELD VÉLIZY",
+    "adresse": "2 AVENUE DE L'EUROPE,CENTRE COMMERCIAL WESTFIELD VÉLIZY",
     "code_postal_ville": "78140 VÉLIZY"
   },
   "articles": [
