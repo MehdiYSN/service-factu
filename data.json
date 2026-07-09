@@ -1,46 +1,51 @@
 {
-  "type_document": "FACTURE",
-  "numero": "FA000827",
-  "date": "15/06/2026",
+  "type_document": "DEVIS",
+  "numero": "DE000015",
+  "date": "09/07/2026",
   "validite": "30 Jours",
   "client": {
-    "nom": "BRENDY'S CAFÉ VÉLIZY 2 ",
-    "adresse": "2 AVENUE DE L'EUROPE,CENTRE COMMERCIAL WESTFIELD VÉLIZY",
-    "code_postal_ville": "78140 VÉLIZY VILLACCOUBLAY"
+    "nom": "BOULANGERIE TRADITION DE DUGNY",
+    "adresse": "3 PLACE GABRIEL PERI",
+    "code_postal_ville": "93440 DUGNY"
   },
   "articles": [
     {
       "quantite": "",
-        "designation": "- Remplacement d'une turbine sur caisson de compensation de cuisine professionnelle après vérification complète de l'installation",
+        "designation": "- FOURNITURE ET POSE DE SYSTÈMES D'EXTRACTION D'AIR VICIÉ ET VENTILATION COMPRENANT:",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Vérification et contrôle du fonctionnement de l'installation de compensation d'air en cuisine",
+      "designation": "- RDC:",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Fourniture d'une turbine pour caisson de compensation",
+      "designation": "- Un réseau aéraulique en acier galvanisé classé résistant coupe feu M0 de diamètre 315mm pour la salle",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Dépose de la turbine défectueuse et évacuation",
+      "designation": "- Un réseau aéraulique en acier galvanisé classé résistant coupe feu M0 de diamètre 250mm pour le four à pizza",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Pose et raccordement de la nouvelle turbine",
+      "designation": "- Pose et Une tourelle d'extraction classé résistant au feu F400/120",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Essais,réglages et remise en service de l'installation",
+      "designation": "- Un auto-transformateur 5 vitesses",
+      "pu_ht": ""
+    },
+    {
+      "quantite": "",
+      "designation": "- Un cable d'alimentation électrique incendie CR1 3g 2.5",
       "pu_ht": ""
       }
   ],
-  "total_ht_manuel": "931.15",
-  "tva_taux": "0",
+  "total_ht_manuel": "8200",
+  "tva_taux": "20",
   "tva_manuelle": ""
 }
