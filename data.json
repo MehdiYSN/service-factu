@@ -3,7 +3,7 @@
   "numero": "FA0001426",
   "date": "22/07/2026",
   "validite": "30 Jours",
-  "client": "",
+  "client": {
     "nom": "BRENDY'S CAFÉ O'PARINOR",
     "adresse": "LE HAUT DE GALY,CENTRE COMMERCIAL PARINOR",
     "code_postal_ville": "93600 AULNAY SOUS BOIS"
