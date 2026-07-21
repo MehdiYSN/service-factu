@@ -1,46 +1,41 @@
 {
-  "type_document": "DEVIS",
-  "numero": "DE000015",
-  "date": "09/07/2026",
+  "type_document": "FACTURE",
+  "numero": "FA0001426",
+  "date": "11/07/2026",
   "validite": "30 Jours",
   "client": {
-    "nom": "BOULANGERIE TRADITION DE DUGNY",
-    "adresse": "3 PLACE GABRIEL PERI",
-    "code_postal_ville": "93440 DUGNY"
+    "nom": "SERVICE NETTOYAGE",
+    "adresse": "",
+    "code_postal_ville": ""
   },
   "articles": [
     {
       "quantite": "",
-        "designation": " RDC : FOURNITURE ET POSE DE SYSTÈMES D'EXTRACTION D'AIR VICIÉ ET VENTILATION COMPRENANT:",
+        "designation": "Fourniture d'une gaine de soufflage neuve avec les accessoires de fixation et de raccordement",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Un réseau aéraulique en acier galvanisé classé résistant coupe feu M0 de diamètre 315mm pour la salle",
+      "designation": "Pose et raccordement de la nouvelle gaine",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Un réseau aéraulique en acier galvanisé classé résistant coupe feu M0 de diamètre 250mm pour le four à pizza",
+      "designation": "Fourniture et pose de 2 nouvel'es grilles de soufflage",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Une tourelle d'extraction classé résistant au feu F400/120",
+      "designation": "Raccordement et remise dn état de l'installation",
       "pu_ht": ""
     },
     {
       "quantite": "",
-      "designation": "- Un auto-transformateur 5 vitesses",
+      "designation": "Controle du bon foncttionnement et des débits d'air après l'intervention",
       "pu_ht": ""
-    },
-    {
-      "quantite": "",
-      "designation": "- Un cable d'alimentation électrique incendie CR1 3g 2.5",
-      "pu_ht": ""
-      }
+    }
   ],
-  "total_ht_manuel": "8200",
-  "tva_taux": "20",
+  "total_ht_manuel": "1090",
+  "tva_taux": "0",
   "tva_manuelle": ""
 }
