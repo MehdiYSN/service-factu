@@ -4,7 +4,7 @@
   "date": "11/07/2026",
   "validite": "30 Jours",
   "client": {
-    "nom": "SERVICE NETTOYAGE",
+    "nom": "",
     "adresse": "",
     "code_postal_ville": ""
   },
@@ -26,6 +26,11 @@
     },
     {
       "quantite": "",
+      "designation": "Fourniture et pose des filtres G4"
+      "pu_ht": ""
+    },
+    {
+      "quantite": "",
       "designation": "Raccordement et remise en état de l'installation",
       "pu_ht": ""
     },
@@ -35,7 +40,7 @@
       "pu_ht": ""
     }
   ],
-  "total_ht_manuel": "1090",
+  "total_ht_manuel": "1370",
   "tva_taux": "0",
   "tva_manuelle": ""
 }
