@@ -1,46 +1,23 @@
 {
   "type_document": "FACTURE",
-  "numero": "FA0001426",
-  "date": "22/07/2026",
+  "numero": "FA0001427",
+  "date": "17/08/2026",
   "validite": "30 Jours",
   "client": {
-    "nom": "BRENDY'S CAFÉ O'PARINOR",
-    "adresse": "LE HAUT DE GALY CENTRE COMMERCIAL PARINOR",
-    "code_postal_ville": "93600 AULNAY SOUS BOIS"
+    "nom": "BRENDY'S CAFÉ LA DÉFENSE",
+    "adresse": "15 PARV DE LA DÉFENSE",
+    "code_postal_ville": "92800 PUTEAUX"
   },
   "articles": [
     {
       "quantite": "",
-      "designation": "Fourniture d'une gaine de soufflage neuve avec les accessoires de fixation et de raccordement",
-      "pu_ht": ""
-    },
-    {
+      "designation": "Nettoyage de 2 climatiseurs intérieur et exterieur",
+      },
       "quantite": "",
-      "designation": "Pose et raccordement de la nouvelle gaine",
-      "pu_ht": ""
-    },
-    {
-      "quantite": "",
-      "designation": "Fourniture et pose de 2 nouvelles grilles de soufflage",
-      "pu_ht": ""
-    },
-    {
-      "quantite": "",
-      "designation": "Fourniture et pose des filtres G4",
-      "pu_ht": ""
-    },
-    {
-      "quantite": "",
-      "designation": "Raccordement et remise en état de l'installation",
-      "pu_ht": ""
-    },
-    {
-      "quantite": "",
-      "designation": "Contrôle du bon foncttionnement et des débits d'air après l'intervention",
-      "pu_ht": ""
+      "designation": "Changement des filtres",
     }
   ],
-  "total_ht_manuel": "1370",
+  "total_ht_manuel": "797",
   "tva_taux": "0",
   "tva_manuelle": ""
 }
