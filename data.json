@@ -1,7 +1,7 @@
 {
   "type_document": "FACTURE",
-  "numero": "FA0001427",
-  "date": "10/07/2026",
+  "numero": "FA0001428",
+  "date":  "03/08/2026",
   "validite": "30 Jours",
   "client": {
     "nom": "BRENDY'S CAFÉ LA DÉFENSE",
@@ -11,16 +11,11 @@
   "articles": [
     {
       "quantite": "",
-      "designation": "Nettoyage de 2 climatiseurs intérieur et exterieur",
-      "pu_ht": ""
-    },
-    {
-      "quantite": "",
-      "designation": "Changement des filtres",
+      "designation": "Changement du variateur",
       "pu_ht": ""
     }
   ],
-  "total_ht_manuel": "797",
+  "total_ht_manuel": "932",
   "tva_taux": "0",
   "tva_manuelle": ""
 }
