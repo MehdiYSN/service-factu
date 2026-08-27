@@ -1,21 +1,26 @@
 {
   "type_document": "FACTURE",
-  "numero": "FA0001428",
-  "date":  "03/08/2026",
+  "numero": "FA0001429",
+  "date":  "10/08/2026",
   "validite": "30 Jours",
   "client": {
-    "nom": "BRENDY'S CAFÉ LA DÉFENSE",
-    "adresse": "15 PARV DE LA DÉFENSE",
-    "code_postal_ville": "92800 PUTEAUX"
+    "nom": "BRENDY'S CAFÉ O'PARINOR",
+    "adresse": "LE HAUT DE GALY,CENTRE COMMERCIAL PARINOR",
+    "code_postal_ville": "93600 AULNAY SOUS BOIS"
   },
   "articles": [
     {
       "quantite": "",
-      "designation": "Changement du variateur de frequence",
+      "designation": "Dépose de la turbine d'extraction d'air chaud des moteurs",
+      "pu_ht": ""
+    },
+    {
+      "quantite": "",
+      "désignation": "Fourniture et remplacement de la turbine d'extraction et mise en service",
       "pu_ht": ""
     }
   ],
-  "total_ht_manuel": "932",
+  "total_ht_manuel": "847,50",
   "tva_taux": "0",
   "tva_manuelle": ""
 }
